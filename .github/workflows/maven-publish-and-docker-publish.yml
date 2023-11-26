@@ -57,8 +57,8 @@ jobs:
       with:
         name: java-app
     - name: Logging in to Docker
-      run: docker login ghcr.io -u MiskovitsD -p ${{ github.token }}
+      run: docker login ghcr.io -u miskovitsd -p ${{ github.token }}
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ghcr.io/MiskovitsD/cubix/cloudnative/demo:actions
+      run: docker build . --file Dockerfile --tag ghcr.io/miskovitsd/cubix/cloudnative/demo:actions
     - name: Publishing the Docker image
-      run: docker push ghcr.io/MiskovitsD/cubix/cloudnative/demo:actions
+      run: docker push ghcr.io/miskovitsd/cubix/cloudnative/demo:actions
